@@ -1,0 +1,222 @@
+{\rtf1\ansi\deff0\nouicompat{\fonttbl{\f0\fnil Cascadia Mono;}{\f1\fnil\fcharset204 Cascadia Mono;}{\f2\fnil\fcharset0 Calibri;}}
+{\colortbl ;\red0\green0\blue255;\red0\green0\blue0;\red43\green145\blue175;\red163\green21\blue21;\red0\green128\blue0;\red128\green0\blue0;}
+{\*\generator Riched20 10.0.19041}\viewkind4\uc1 
+\pard\sa200\sl276\slmult1\cf1\f0\fs19\lang4105 using\cf2  System;\par
+\cf1 using\cf2  System.Collections.Generic;\par
+\cf1 using\cf2  System.IO;\par
+\cf1 using\cf2  System.Linq;\par
+\cf1 using\cf2  System.Text;\par
+\cf1 using\cf2  System.Threading.Tasks;\par
+\par
+\cf1 namespace\cf2  Labs\par
+\{\par
+    \par
+    \cf1 internal\cf2  \cf1 class\cf2  \cf3 Program\cf2\par
+    \{\par
+        \cf1 internal\cf2  \cf1 class\cf2  \cf3 Class1\cf2\par
+        \{\par
+            \cf1 public\cf2  \cf1 string\cf2  firstName;\par
+            \cf1 public\cf2  \cf1 string\cf2  lastName;\par
+            \cf1 public\cf2  \cf1 int\cf2  age;\par
+\par
+            \cf1 public\cf2  \cf1 static\cf2  \cf1 void\cf2  Printss(Class1 class1)\par
+            \{\par
+                Console.WriteLine(\cf4 "FirstName"\cf2 );\par
+                Console.WriteLine(class1.firstName);\par
+                Console.WriteLine(\cf4 "LastName"\cf2 );\par
+                Console.WriteLine(class1.lastName);\par
+                Console.WriteLine(\cf4 "Age"\cf2 );\par
+                Console.WriteLine(class1.age);\par
+            \}\par
+        \}\par
+\par
+        \cf1 static\cf2  \cf1 void\cf2  Main(\cf1 string\cf2 [] args)\par
+        \{\par
+\par
+            \cf1 int\cf2  a;\par
+            \cf1 string\cf2  str;\par
+            \cf1 int\cf2  age;\par
+            \cf1 int\cf2  b = 0;\par
+            \cf1 int\cf2  c = 0;\par
+            \cf1 int\cf2  d = 0;\par
+            \cf1 int\cf2  nums = 0;\par
+            \cf1 string\cf2  str3, str4, str5;\par
+            \cf1 int\cf2  jos;\par
+\par
+            \cf1 int\cf2  e = 0;\par
+            \cf5 //int sad = 0;\cf2\par
+            \cf1 string\cf2  str2;\par
+\par
+            \cf1 var\cf2  students = \cf1 new\cf2  List<Class1>();\par
+\par
+            \cf1 string\cf2 [] strr;\par
+            Console.WriteLine(\cf4 "\f1\lang1058\'c2\'e5\'e4\'e4\'e8\'f2\'fc Y/N , \'ff\'ea\'f9\'ee \'f5\'ee\'f7\'e8\'f2\'e5 \'ef\'ee\'e1\'e0\'f7\'e8\'f2\'e8 \'f1\'f2\'f3\'e4\'e5\'ed\'f2\'e8\'e2 \'ff\'ea\'e8 \'e2\'e6\'e5 \'e5 \'e2 \'e1\'e0\'e7\'e8 \'e4\'e0\'ed\'e8\'f5"\cf2 );\par
+            \cf1 string\cf2  strrr = Console.ReadLine();\par
+            \cf1 if\cf2  (strrr == \cf4 "Y"\cf2 )\par
+            \{\par
+                \cf1 for\cf2  (\cf1 int\cf2  i = 0; i < 100; i++)\par
+                \{\par
+                    \cf1 if\cf2  (File.Exists(\cf6 $@"C:\\Users\\Shrek\\Desktop\\asdasd\\as\cf2\{i\}\cf6 .txt"\cf2 ))\par
+                    \{\par
+                        strr = File.ReadAllLines(\cf6 $@"C:\\Users\\Shrek\\Desktop\\asdasd\\as\cf2\{i\}\cf6 .txt"\cf2 );\par
+                        students.Add(\cf1 new\cf2  Class1());\par
+                        students[i].firstName = strr[0];\par
+                        Console.WriteLine(\cf4 $"\'c8\'ec\'ff: \cf2\{students[i].firstName\}\cf4 "\cf2 );\par
+                        students[i].lastName = strr[1];\par
+                        Console.WriteLine(\cf4 $"\'d4\'e0\'ec\'e8\'eb\'e8\'ff: \cf2\{students[i].lastName\}\cf4 "\cf2 );\par
+                        students[i].age = Convert.ToInt32(strr[2]);\par
+                        Console.WriteLine(\cf4 $"\'d0\'ee\'ea\'e8: \cf2\{students[i].age\}\cf4 "\cf2 );\par
+                    \}\par
+                \}\par
+\par
+            \}\par
+            \par
+                Console.WriteLine(\cf4 "\'c2\'e5\'e4\'e8\'f2\'fc \'f1\'ea\'e8\'eb\'fc\'ea\'e8 \'e2\'e8 \'f5\'ee\'f7\'e8\'f2\'e5 \'f1\'f2\'f3\'e4\'e5\'ed\'f2\'e8\'e2 \'e4\'ee\'e1\'e0\'e2\'e8\'f2\'e8"\cf2 );\par
+\par
+                a = Convert.ToInt32(Console.ReadLine());\par
+           \par
+\par
+            jos = \cf1 new\cf2  DirectoryInfo(\cf6 @"C:\\Users\\Shrek\\Desktop\\asdasd"\cf2 ).GetFiles().Length;\par
+            \cf1 for\cf2  (\cf1 int\cf2  i = jos; i < a+jos; i++)\par
+            \{\par
+                students.Add(\cf1 new\cf2  Class1());\par
+                Console.WriteLine(\cf4 "\'c8\'ec\'ff: "\cf2 );\par
+                students[i].firstName = Console.ReadLine();\par
+                Console.WriteLine(\cf4 "\'d4\'e0\'ec\'e8\'eb\'e8\'ff: "\cf2 );\par
+                students[i].lastName = Console.ReadLine();\par
+                Console.WriteLine(\cf4 "\'d0\'ee\'ea\'e8: "\cf2 );\par
+                students[i].age = Convert.ToInt32(Console.ReadLine());\par
+                Console.Clear();\par
+            \}\par
+            e = 0;\par
+            Console.WriteLine(\cf4 "\'c2\'f1\'e5 \'e3\'ee\'f2\'ee\'e2\'ee, \'ec\'e8 \'e4\'ee\'e1\'e0\'e2\'e8\'eb\'e8 \'f1\'f2\'f3\'e4\'e5\'ed\'f2\'e8\'e2 \'e4\'ee \'f1\'ef\'e8\'f1\'ea\'f3"\cf2 );\par
+\par
+            Console.WriteLine(\cf4 "------------------------------------------------------"\cf2 );\par
+\par
+            Console.WriteLine(\cf4 "\'d4\'c8\'cb\'dc\'d2\'d0\'c8"\cf2 );\par
+        stano1:\par
+            Console.WriteLine(\par
+                \cf4 "1 - \'e7\'ed\'e0\'e9\'f2\'e8 \'e2\'f1\'e8\'f5 \'e7\'e0 \'e8\'ec\'ff\'ec, "\cf2  +\par
+                \cf4 "2 - \'e7\'ed\'ed\'e0\'e9\'f2\'e8 \'e2\'f1\'e8\'f5 \'e7\'e0 \'f4\'e0\'ec\'e8\'eb\'e5\'ba\'fe, "\cf2  +\par
+                \cf4 "3 - \'e7\'ed\'e0\'e9\'f2\'e8 \'e2\'f1\'e8\'f5 \'e7\'e0 \'f0\'ee\'ea\'e0\'ec\'e8, "\cf2  +\par
+                \cf4 "4 - \'e2\'e8\'e2\'e5\'f1\'f2\'e8 \'e2\'f1\'e8\'f5 \'f1\'f2\'f3\'e4\'e5\'ed\'f2\'e8\'e2, "\cf2  +\par
+                \cf4 "5 - \'e7\'e0\'ea\'f0\'e8\'f2\'e8"\cf2 );\par
+\par
+\par
+\par
+\par
+\par
+            a = Convert.ToInt32(Console.ReadLine());\par
+            \cf1 if\cf2  (a == 1)\par
+            \{\par
+                Console.WriteLine(\cf4 "\'c2\'e5\'e4\'b3\'f2\'fc \'e8\'ec\'ff"\cf2 );\par
+                str = Console.ReadLine();\par
+                \cf1 foreach\cf2  (var item \cf1 in\cf2  students)\par
+                \{\par
+                    \cf1 if\cf2  (str == students[b].firstName)\par
+\par
+                    \{\par
+                        Console.WriteLine(\cf4 "\'c8\'ec\'ff: "\cf2 );\par
+                        Console.Write(students[b].firstName);\par
+                        Console.WriteLine(\cf4 "\'d4\'e0\'ec\'e8\'eb\'e8\'ff: "\cf2 );\par
+                        Console.Write(students[b].lastName);\par
+                        Console.WriteLine(\cf4 "\'ca-\'f1\'f2\'fc \'f0\'ee\'ea\'e8\'e2: "\cf2 );\par
+                        Console.Write(students[b].age);\par
+                        Console.WriteLine();\par
+\par
+                    \}\par
+                    b++;\par
+                \}\par
+\par
+            \}\par
+            \cf1 else\cf2  \cf1 if\cf2  (a == 2)\par
+            \{\par
+                Console.WriteLine(\cf4 "\'c2\'e5\'e4\'e8\'f2\'fc \'f4\'e0\'ec\'e8\'eb\'e8\'fe"\cf2 );\par
+                str2 = Console.ReadLine();\par
+                \cf1 foreach\cf2  (var item \cf1 in\cf2  students)\par
+                \{\par
+                    \cf1 if\cf2  (str2 == students[c].lastName)\par
+                    \{\par
+                        Console.WriteLine(\cf4 "\'c8\'ec\'ff: "\cf2 );\par
+                        Console.Write(students[c].firstName);\par
+                        Console.WriteLine(\cf4 "\'d4\'e0\'ec\'e8\'eb\'e8\'ff: "\cf2 );\par
+                        Console.Write(students[c].lastName);\par
+                        Console.WriteLine(\cf4 "\'ca-\'f1\'f2\'fc \'f0\'ee\'ea\'e8\'e2: "\cf2 );\par
+                        Console.Write(students[c].age);\par
+                        Console.WriteLine();\par
+\par
+                    \}\par
+                    c++;\par
+                \}\par
+            \}\par
+            \cf1 else\cf2  \cf1 if\cf2  (a == 3)\par
+            \{\par
+                Console.WriteLine(\cf4 "\'c2\'e5\'e4\'e8\'f2\'fc \'ea-\'f1\'f2\'fc \'f0\'ee\'ea\'e8\'e2"\cf2 );\par
+\par
+                age = Convert.ToInt32(Console.ReadLine());\par
+                \cf1 foreach\cf2  (var item \cf1 in\cf2  students)\par
+                \{\par
+                    \cf1 if\cf2  (age == students[d].age)\par
+                    \{\par
+                        Console.WriteLine(\cf4 "\'c8\'ec\'ff: "\cf2 );\par
+                        Console.Write(students[d].firstName);\par
+                        Console.WriteLine(\cf4 "\'d4\'e0\'ec\'e8\'eb\'e8\'ff: "\cf2 );\par
+                        Console.Write(students[d].lastName);\par
+                        Console.WriteLine(\cf4 "\'ca-\'f1\'f2\'fc \'f0\'ee\'ea\'e8\'e2: "\cf2 );\par
+                        Console.Write(students[d].age);\par
+                        Console.WriteLine();\par
+\par
+                    \}\par
+                    d++;\par
+                \}\par
+            \}\par
+            \cf1 else\cf2  \cf1 if\cf2  (a == 4)\par
+            \{\par
+\par
+                \cf1 foreach\cf2  (var item \cf1 in\cf2  students)\par
+                \{\par
+\par
+                    \cf1 if\cf2  (e < students.Count)\par
+                    \{\par
+                        Console.WriteLine(\cf4 $"\'d1\'f2\'f3\'e4\'e5\'ed\'f2 \'ef\'e8\'e4 \'ed\'ee\'ec\'e5\'f0\'ee\'ec \cf2\{e\}\cf4 "\cf2 );\par
+                        Console.Write(\cf4 "\'c8\'ec\'ff: "\cf2 );\par
+                        Console.WriteLine(students[e].firstName);\par
+                        Console.Write(\cf4 "\'d4\'e0\'ec\'e8\'eb\'e8\'ff: "\cf2 );\par
+                        Console.WriteLine(students[e].lastName);\par
+                        Console.Write(\cf4 "\'ca-\'f1\'f2\'fc \'f0\'ee\'ea\'e8\'e2: "\cf2 );\par
+                        Console.WriteLine(students[e].age);\par
+                        Console.WriteLine();\par
+                        Console.WriteLine(\cf4 "------------------------"\cf2 );\par
+\par
+                    \}\par
+                    e++;\par
+\par
+                \}\par
+\par
+            \}\par
+            \cf1 else\cf2  \cf1 if\cf2  (a == 5)\par
+            \{\par
+                Console.WriteLine(\cf4 ""\cf2 );\par
+                nums++;\par
+            \}\par
+            \cf1 if\cf2  (nums == 0)\par
+            \{\par
+                \cf1 goto\cf2  stano1;\par
+            \}\par
+\par
+            \cf1 for\cf2  (\cf1 int\cf2  i = 0; i < students.Count; i++)\par
+            \{\par
+                \cf1 using\cf2  (StreamWriter sw = File.CreateText(\cf6 $@"C:\\Users\\Shrek\\Desktop\\asdasd\\as\cf2\{i\}\cf6 .txt"\cf2 ))\par
+                \{\par
+                    sw.WriteLine(students[i].firstName);\par
+                    sw.WriteLine(students[i].lastName);\par
+                    sw.WriteLine(students[i].age.ToString());\par
+                \}\par
+\par
+            \}\par
+\par
+        \}\par
+    \}\par
+\}\cf0\f2\fs22\lang4105\par
+}
+ 
